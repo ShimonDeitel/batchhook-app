@@ -34,7 +34,7 @@ final class Store: ObservableObject {
         isPro || entries.count < Store.freeLimit
     }
 
-    func add(pattern: String, wool: String, backing: String, notes: String) {
+    func add(name: String, pattern: String, wool: String, backing: String, notes: String) {
         guard canAddMore else { return }
         let entry = RugEntry(name: name, pattern: pattern, wool: wool, backing: backing, notes: notes)
         entries.insert(entry, at: 0)
